@@ -10,6 +10,14 @@ GTEST_TEST(IsSignIncluded, basic) {
   EXPECT_EQ(true, IsSignIncluded(1666));
 }
 
+GTEST_TEST(IsSignIncludedFast, basic) {
+  EXPECT_EQ(false, IsSignIncludedFast(1));
+  EXPECT_EQ(false, IsSignIncluded(665));
+
+  EXPECT_EQ(true, IsSignIncludedFast(666));
+  EXPECT_EQ(true, IsSignIncludedFast(1666));
+}
+
 GTEST_TEST(Basic, basic) {
   EXPECT_EQ(666u, GetNthTitle(1));
   EXPECT_EQ(1666u, GetNthTitle(2));

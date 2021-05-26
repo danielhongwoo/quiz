@@ -8,6 +8,19 @@ bool IsSignIncluded(unsigned int n) {
   return found;
 }
 
+bool IsSignIncludedFast(unsigned int n) {
+  while (true) {
+    if (n < 666) {
+      return false;
+    }
+    if (n % 1000 == 666) {
+      return true;
+    }
+    n = n / 10;
+  }
+  return false;
+}
+
 unsigned int GetNthTitle(unsigned int n) {
   n--;
 
